@@ -6,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dad Joke Generator</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
-    
-      <h1 class="title is-1 is-family-monospace pt-3	has-text-centered">The Ultimate Dad Joke Generator</h1>
-    
+    <h1 class="title is-1 is-family-monospace pt-3 has-text-centered">The Ultimate Dad Joke Generator</h1>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <a class="navbar-item" href="/">Home</a>
+      <a class="navbar-item" href="saved.html">Saved Jokes</a>
+      
+    </nav>
     <div class="message is-large mx-6" id="container">
-      <div class="message-body  has-background-light has-text-centered ">
- (World's Greatest Dad Jokes Here)
-</div>
-
+      <div class="message-body has-background-light has-text-centered">(World's Greatest Dad Jokes Here)</div>
     </div>
     <div class="container has-text-centered">
-    <button class="button mt-6 has-text-centered has-text-light has-background-info" id="joke-btn">New Joke</button>
+      <button class="button mt-6 has-text-centered has-text-light has-background-info" id="joke-btn">New Joke</button>
+      <button class="button mt-6 has-text-centered has-text-light has-background-info" id="save-btn">
+        Add to Saved Jokes
+      </button>
     </div>
     <script src="./assets/js/script.js"></script>
   </body>
