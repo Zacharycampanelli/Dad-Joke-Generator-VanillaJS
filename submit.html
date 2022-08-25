@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saved Jokes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <h1 class="is-family-monospace p-3 has-text-centered">
+      The <span style="color: red">Ultimate</span> Dad Joke Generator
+    </h1>
+    <nav
+      class="navbar is-danger has-text-white is-flex is-justify-content-space-evenly is-align-items-center"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <a class="navbar-item" href="/">Home</a>
+      <a class="navbar-item" href="saved.html">Saved Jokes</a>
+      <a class="navbar-item" href="submit.html">Submit a Joke</a>
+    </nav>
+    <div class="container is-flex is-align-items-center is-flex-direction-column">
+      <h2 class="is-size-3">Submit a Joke</h2>
+      
+      <div class="column is-two-thirds">
+        <div class="field">
+          <label class="label">Name:</label>
+          <div class="control">
+            <input type="text" class="input" placeholder="Name" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Email:</label>
+          <div class="control">
+            <input type="text" class="input" placeholder="Email" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Phone:</label>
+          <div class="control">
+            <input type="text" class="input" placeholder="Phone Number" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Message</label>
+          <div class="control">
+            <textarea class="textarea" placeholder="Your Joke Here"></textarea>
+          </div>
+        </div>
+
+        <div class="field has-text-centered">
+          <div class="control">
+            <button class="button is-link has-background-danger-dark	">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="./assets/js/saved.js"></script> -->
+  </body>
+</html>
