@@ -33,7 +33,7 @@ const appendJoke = (apiJoke) => {
   const joke = document.createElement('p');
   console.log('here');
   joke.textContent = apiJoke;
-  joke.classList.add('has-text-danger-dark');
+  joke.classList.add('has-text-info');
   jokeContainer.appendChild(joke);
 };
 
