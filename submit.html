@@ -30,42 +30,44 @@
     </nav>
     <div class="container is-flex is-align-items-center is-flex-direction-column">
       <h2 class="is-size-3">Submit a Joke</h2>
-      
-      <div class="column is-two-thirds">
-        <div class="field">
-          <label class="label">Name:</label>
-          <div class="control">
-            <input type="text" class="input" placeholder="Name" />
-          </div>
-        </div>
 
-        <div class="field">
-          <label class="label">Email:</label>
-          <div class="control">
-            <input type="text" class="input" placeholder="Email" />
+      <form action="mailto:dadjokes@dadjokes.com" method="get" enctype="text/plain">
+        <div class="column is-two-thirds">
+          <div class="field">
+            <label class="label">Name:</label>
+            <div class="control">
+              <input type="text" class="input" placeholder="Name" required />
+            </div>
           </div>
-        </div>
 
-        <div class="field">
-          <label class="label">Phone:</label>
-          <div class="control">
-            <input type="text" class="input" placeholder="Phone Number" />
+          <div class="field">
+            <label class="label">Email:</label>
+            <div class="control">
+              <input type="email" class="input" placeholder="Email" required/>
+            </div>
           </div>
-        </div>
 
-        <div class="field">
-          <label class="label">Message</label>
-          <div class="control">
-            <textarea class="textarea" placeholder="Your Joke Here"></textarea>
+          <div class="field">
+            <label class="label">Phone:</label>
+            <div class="control">
+              <input type="number" class="input" placeholder="Phone Number" required/>
+            </div>
           </div>
-        </div>
 
-        <div class="field has-text-centered">
-          <div class="control">
-            <button class="button is-link has-background-danger-dark	">Submit</button>
+          <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="Your Joke Here" required></textarea>
+            </div>
+          </div>
+
+          <div class="field has-text-centered">
+            <div class="control">
+              <button class="button is-link has-background-danger-dark">Submit</button>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
 
     <!-- <script src="./assets/js/saved.js"></script> -->

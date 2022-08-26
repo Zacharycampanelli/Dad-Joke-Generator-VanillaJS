@@ -1,7 +1,8 @@
 const jokeContainer = document.getElementById('container');
 const jokeButton = document.getElementById('joke-btn');
 const saveButton = document.getElementById('save-btn');
-const messageBody = document.querySelector('message-body');
+const copyButton = document.getElementById('copy-btn');
+const messageBody = document.getElementById('message-body');
 const getJoke = async () => {
   const url = 'https://icanhazdadjoke.com/';
   try {
@@ -34,6 +35,7 @@ const appendJoke = (apiJoke) => {
   console.log('here');
   joke.textContent = apiJoke;
   joke.classList.add('has-text-info');
+  joke.classList.add('toCopy');
   jokeContainer.appendChild(joke);
 };
 
@@ -73,11 +75,23 @@ const splitJoke = (joke) => {
 };
 
 const saveJoke = () => {
-  // if()
+
   console.log(jokeContainer.innerText)
   window.localStorage.setItem(window.localStorage.length - 1, jokeContainer.innerText);
 };
 
+const copyJoke = () => {
+
+  let message = document.getElementsByClassName('toCopy')[0].innerHTML
+  console.log(typeof message);
+  navigator.clipboard.writeText(message).then(() => {
+    alert("Copied!")
+  })
+  
+
+}
+
 jokeButton.addEventListener('click', getJoke);
 saveButton.addEventListener('click', saveJoke);
+copyButton.addEventListener('click', copyJoke);
 // getJoke();
