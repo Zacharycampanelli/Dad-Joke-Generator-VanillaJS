@@ -30,16 +30,16 @@ function getSavedJokes() {
   savedJokes = JSON.parse(savedJokes);
 
   console.log(savedJokes)
-  console.log("hereeee")
+
 
   for (let i = 0; i < savedJokes.length; i++) {
     createSingleLikedJoke(savedJokes[i])
   }
 }
 
-function saveJokes() {
-  localStorage.setItem("jokes", JSON.stringify(jokes))
-}
+// function saveJokes() {
+//   localStorage.setItem("jokes", JSON.stringify(jokes))
+// }
 
 function createSingleLikedJoke(joke_text) {
   // Create list item
@@ -65,10 +65,10 @@ function createSingleLikedJoke(joke_text) {
   jokeContainer.appendChild(jokeItemEl);
   
   // jokeContainer.appendChild(br);
-  joke_text.id = jokeId;
+  // joke_text.id = jokeId;
   jokes.push(joke_text)
 
-  createSingleLikedJoke();
+  
   jokeId++;
 }
 

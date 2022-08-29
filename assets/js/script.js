@@ -38,15 +38,17 @@ const appendJoke = (apiJoke) => {
   joke.className = 'has-text-info toCopy';
   console.log(joke);
   currentJoke = joke;
-  console.log(currentJoke)
+  console.log(currentJoke);
   jokeContainer.appendChild(joke);
 };
 
 // Saves a liked joke to localStorage
 function saveJokes() {
-  
-  jokes.push(currentJoke.textContent)
-  console.log(jokes)
+  let jokes = JSON.parse(localStorage.getItem('jokes'));
+
+  console.log(jokes);
+
+  jokes.push(currentJoke.textContent);
   localStorage.setItem('jokes', JSON.stringify(jokes));
 }
 
@@ -58,7 +60,18 @@ const copyJoke = () => {
   });
 };
 
+function loadJokes() {
+  let savedJokes = localStorage.getItem('jokes');
+
+  if (!savedJokes) {
+    return false;
+  }
+
+  savedJokes = JSON.parse(savedJokes);
+}
+
 jokeButton.addEventListener('click', getNewJoke);
 saveButton.addEventListener('click', saveJokes);
 copyButton.addEventListener('click', copyJoke);
 //getNewJoke();
+loadJokes();
