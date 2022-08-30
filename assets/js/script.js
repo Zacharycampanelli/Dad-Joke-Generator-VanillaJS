@@ -11,6 +11,7 @@ let jokeId = 0;
 // Creates new joke from api call on homepage
 const getNewJoke = async () => {
   saveButton.disabled = false;
+  copyButton.disabled = false;
   const url = 'https://icanhazdadjoke.com/';
   try {
     const response = await fetch(url, { method: 'GET', headers: { accept: 'application/json' } });
@@ -76,4 +77,5 @@ saveButton.addEventListener('click', saveJokes);
 copyButton.addEventListener('click', copyJoke);
 //getNewJoke();
 saveButton.disabled = true;
+copyButton.disabled = true;
 loadJokes();
